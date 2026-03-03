@@ -19,6 +19,17 @@ project:
   jupyter:
       binder:
         repo: projectpythia/interactive-sentinel-2-cookbook
+  error_rules:
+    - rule: link-resolves
+      severity: ignore
+      keys:
+        - 'https://doi.org/**'
+        - 'https://zenodo.org/**'
+        - 'https://stacspec.org/en'
+    - rule: doi-link-valid
+      severity: ignore
+      keys:
+        - 'https://zenodo.org/**'   # also suppress the DOI validation error
 site:
   options:
     logo: notebooks/images/logos/pythia_logo-white-rtext.svg
